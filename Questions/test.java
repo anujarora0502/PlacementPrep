@@ -4,20 +4,23 @@ public class test {
 
     public static void main(String[] args) {
 
-        Linked_List ll = new Linked_List();
+        StackMin<Integer> st = new StackMin<>();
 
-        for (int i = 0; i < 5; i++) {
-            ll.add(i);
-        }
+        st.push(3);
+        st.push(8);
+        st.push(5);
+        st.push(1);
+        st.push(2);
+        st.push(4);
+        st.push(-10);
 
-        System.out.println(ll.length);
-
+        System.out.println(st.min());
+        st.pop();
+        st.pop();
+        System.out.println(st.min());
+        st.pop();
+        st.pop();
+        System.out.println(st.min());
         
-            ll.deleteNode(1);
-        
-
-        System.out.println(ll.length);
-
-        System.out.println(ll);
     }
 }
