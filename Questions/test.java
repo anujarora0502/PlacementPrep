@@ -4,29 +4,20 @@ public class test {
 
     public static void main(String[] args) {
 
-        SetOfStack st = new SetOfStack(3);
+        TwoStackQueue myQueue = new TwoStackQueue();
 
-        st.push(3);
-        st.push(8);
-        st.push(5);
-        st.push(1);
-        st.push(2);
-        st.push(4);
-        st.push(-10);
-        st.push(1);
-        st.push(-100);
-        st.push(-20);
-        st.push(-90);
-        st.push(-5);
-        st.push(-9);
-        st.push(200);
-        
-        System.out.println(st.al.size());
+        myQueue.enqueue(1);
+        myQueue.enqueue(2);
+        myQueue.enqueue(3);
+        myQueue.enqueue(4);
+        myQueue.enqueue(5);
+        myQueue.enqueue(10);
+        myQueue.enqueue(7);
+        myQueue.enqueue(6);
+        myQueue.enqueue(-12);
 
-        System.out.println(st.pop());
-        System.out.println(st.pop());
-        System.out.println(st.pop());
-        System.out.println(st.popAt(1));
-        
+        System.out.println(myQueue.dequeue() + " " + myQueue.dequeue() + " " + myQueue.dequeue() + " "
+                + myQueue.dequeue() + " " + myQueue.peek() + " " + myQueue.dequeue());
+
     }
 }
