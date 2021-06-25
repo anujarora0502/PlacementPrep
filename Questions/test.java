@@ -4,20 +4,14 @@ public class test {
 
     public static void main(String[] args) {
 
-        TwoStackQueue myQueue = new TwoStackQueue();
+        MyGraph grph = new MyGraph(5);
 
-        myQueue.enqueue(1);
-        myQueue.enqueue(2);
-        myQueue.enqueue(3);
-        myQueue.enqueue(4);
-        myQueue.enqueue(5);
-        myQueue.enqueue(10);
-        myQueue.enqueue(7);
-        myQueue.enqueue(6);
-        myQueue.enqueue(-12);
+        grph.addDirectionalEdge(0,1);
+        grph.addDirectionalEdge(1,2);
+        grph.addDirectionalEdge(2,3);
+        grph.addDirectionalEdge(4,3);
+        grph.addDirectionalEdge(4,1);
 
-        System.out.println(myQueue.dequeue() + " " + myQueue.dequeue() + " " + myQueue.dequeue() + " "
-                + myQueue.dequeue() + " " + myQueue.peek() + " " + myQueue.dequeue());
-
+        System.out.println(grph);
     }
 }
