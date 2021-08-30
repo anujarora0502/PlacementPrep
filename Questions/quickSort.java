@@ -2,7 +2,7 @@ import java.util.*;
 
 public class quickSort {
     public static void main(String[] args) {
-       int[] arr = {8,7,6,1,0,9,2};
+       int[] arr = {5,2,3,1};
 
        quickSortFn(arr, 0, arr.length - 1);
 

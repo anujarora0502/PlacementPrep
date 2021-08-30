@@ -5,7 +5,7 @@ import java.util.*;
 public class heapSort{
     public static void main(String[] args) {
         
-      int[] arr = {10,9,8,7,6,5,4,3,2,1,0};
+      int[] arr = {-8,-10,-1,2};
 
       int[] heap = buildHeap(arr);
 
@@ -16,7 +16,7 @@ public class heapSort{
     }
 
     public static void heapSortFn(int[] arr){
-        for(int i = arr.length-1;i>1;i--){
+        for(int i = arr.length-1;i>=0;i--){
             swap(0,i,arr);
             downHeapify(arr,i-1);
         }
@@ -37,10 +37,15 @@ public class heapSort{
           }
 
           if(rightChild>end){
-              swap(leftChild,index,arr);
-              index = rightChild;
-              continue;
-          }
+            if(arr[leftChild]>arr[max]){
+            swap(leftChild,index,arr);
+            index = rightChild;
+            continue;
+            }else{
+                return;
+            }    
+        }
+
 
           if(arr[leftChild]<arr[rightChild]){
               if(arr[max]<arr[rightChild]){
